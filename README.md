@@ -40,11 +40,10 @@
 │ └── assets/ # Logos, images
 └── README.md # Project documentation
 
-
+```
 ---
 
-
-## **⚙️ Installation**
+**⚙️ Installation **
 
 Clone the repository and install dependencies:
 
@@ -55,18 +54,19 @@ npm install
 npm run dev
 
 ```
----
+
 
 
 **🌍 Deployment**
-vercel
+
+- vercel
 
 
 ---
 
 
 **📞 Contact**
-For support or business inquiries:
-Email: support@britfix.co.uk
-Phone: +44 1234 567 890
+- For support or business inquiries:
+- Email: support@britfix.co.uk
+- Phone: +44 1234 567 890
 
