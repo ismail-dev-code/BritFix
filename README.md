@@ -21,13 +21,13 @@
 - **Language:** TypeScript / JavaScript  
 - **Styling:** Tailwind CSS  
 - **Icons:** Lucide React  
-- **Deployment:** Vercel (recommended)  
+- **Deployment:** Vercel   
 
 ---
 
 ## 📂 Project Structure
 
-britfix/
+```britfix/
 ├── app/
 │ ├── layout.tsx # Root layout
 │ ├── page.tsx # Home page
@@ -52,10 +52,9 @@ Clone the repository and install dependencies:
 git clone https://github.com/ismail-dev-code/britfix.git
 cd britfix
 npm install
-
 npm run dev
 
-
+```
 ---
 
 
