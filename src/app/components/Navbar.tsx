@@ -3,7 +3,6 @@
 import { LogOut, Menu, X, Search, PhoneCall, Wrench } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
-
 import { useSession, signOut } from "next-auth/react";
 import LoginButton from "./LoginButton";
 
@@ -20,12 +19,15 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white text-gray-800 shadow-md border-b">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-blue-900 to-indigo-800 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 text-amber-600 font-bold text-xl tracking-wide hover:text-amber-700">
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-yellow-400 font-bold text-xl tracking-wide hover:text-yellow-300"
+          >
             <Wrench size={22} />
             BritFix
           </Link>
@@ -36,7 +38,7 @@ const Navbar: React.FC = () => {
               <Link
                 key={i}
                 href={link.path}
-                className="hover:text-amber-600 transition-colors"
+                className="hover:text-yellow-400 transition-colors"
               >
                 {link.name}
               </Link>
@@ -45,13 +47,13 @@ const Navbar: React.FC = () => {
 
           {/* Search Bar (Desktop) */}
           <div className="hidden md:flex flex-1 mx-8 max-w-md">
-            <div className="flex w-full border rounded-lg overflow-hidden">
+            <div className="flex w-full border border-white/20 rounded-lg overflow-hidden bg-white/10 backdrop-blur">
               <input
                 type="text"
                 placeholder="Search repair services..."
-                className="flex-1 px-3 py-2 text-sm outline-none"
+                className="flex-1 px-3 py-2 text-sm text-white placeholder-gray-300 bg-transparent outline-none"
               />
-              <button className="bg-amber-600 px-4 flex items-center justify-center hover:bg-amber-700 text-white">
+              <button className="bg-yellow-400 cursor-pointer px-4 flex items-center justify-center hover:bg-yellow-300 text-black">
                 <Search size={18} />
               </button>
             </div>
@@ -61,7 +63,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center space-x-4">
             <a
               href="tel:+441234567890"
-              className="hidden sm:flex items-center gap-1 text-sm font-medium text-amber-600 hover:text-amber-700"
+              className="hidden sm:flex items-center gap-1 text-sm font-medium text-yellow-400 hover:text-yellow-300"
             >
               <PhoneCall size={16} /> Call Us
             </a>
@@ -83,7 +85,7 @@ const Navbar: React.FC = () => {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen((v) => !v)}
-              className="md:hidden p-2 rounded-md hover:bg-gray-100"
+              className="md:hidden p-2 rounded-md hover:bg-white/10"
             >
               {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -93,13 +95,13 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-gray-50 border-t">
+        <div className="md:hidden bg-gradient-to-r from-blue-900 to-indigo-800 border-t border-white/10">
           <div className="flex flex-col space-y-2 p-4 text-sm font-medium">
             {navLinks.map((link, i) => (
               <Link
                 key={i}
                 href={link.path}
-                className="hover:text-amber-600"
+                className="hover:text-yellow-400"
               >
                 {link.name}
               </Link>
